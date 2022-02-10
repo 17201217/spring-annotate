@@ -9,9 +9,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 @Configuration
-@ComponentScan(value = "com.learning.pjm",excludeFilters = {
+@ComponentScan(value = "com.learning.pjm",includeFilters = {
         @ComponentScan.Filter(type = FilterType.ANNOTATION,classes = {Controller.class, Service.class})
-})
+},useDefaultFilters = false)
 public class MainConfig {
 
     @Bean(value = "person")
